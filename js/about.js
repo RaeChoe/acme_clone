@@ -39,3 +39,13 @@ questions.forEach(q => {
   });
 });
 */
+
+const portfolioSlide = new Swiper(".portfolio", {
+  direction: "horizontal",
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
