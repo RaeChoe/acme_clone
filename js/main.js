@@ -1,3 +1,8 @@
+import { Header } from "./module/header.js";
+import { Footer } from "./module/footer.js";
+Header();
+Footer();
+
 /* 
 window에 스크롤이 생기면 할일
   그 스크롤양이 0보다 크면 body에 active 추가

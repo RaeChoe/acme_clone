@@ -1,5 +1,5 @@
 export function Footer() {
-  const footer = document.querySelector("footer");
+  const footer = document.querySelector("body > footer");
   footer.classList.add("inner-pd", "d-flex", "flex-column", "align-items-center", "g-1");
   footer.innerHTML = `
   <p>&copy; 2014. All rights reserved. 

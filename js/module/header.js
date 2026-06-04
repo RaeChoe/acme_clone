@@ -1,5 +1,5 @@
 export function Header() {
-  const header = document.querySelector("header");
+  const header = document.querySelector("body > header");
   header.innerHTML = `
     <div class="container d-flex justify-content-between align-items-center">
       <h1 class="logo">
