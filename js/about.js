@@ -40,15 +40,22 @@ questions.forEach(q => {
 });
 */
 
-const portfolioSlide = new Swiper(".portfolio", {
+const swiper = new Swiper(".portfolio .swiper", {
   direction: "horizontal",
   loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+});
+
+const slideWrapper = document.querySelector(".portfolio"),
+  prevBtn = slideWrapper.querySelector(".prev"),
+  nextBtn = slideWrapper.querySelector(".next");
+
+nextBtn.addEventListener("click", () => {
+  swiper.slideNext();
+});
+prevBtn.addEventListener("click", () => {
+  swiper.slidePrev();
 });

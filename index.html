@@ -65,39 +65,45 @@
         </ul>
       </section>
       <hr class="container" />
-      <section class="testimonial slidewrapper container inner-pd swiper">
+      <section class="testimonial slidewrapper container inner-pd">
         <h2 class="hidden">testimonial</h2>
-        <ul class="slidecontainer swiper-wrapper">
-          <li class="swiper-slide">
-            <blockquote>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
-                qui debitis dicta mollitia!
-              </p>
-            </blockquote>
-            <small>john doe</small>
-          </li>
-          <li class="swiper-slide">
-            <blockquote>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
-                qui debitis dicta mollitia!
-              </p>
-            </blockquote>
-            <small>jane</small>
-          </li>
-          <li class="swiper-slide">
-            <blockquote>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
-                qui debitis dicta mollitia!
-              </p>
-            </blockquote>
-            <small>tomas</small>
-          </li>
-        </ul>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper">
+          <ul class="slidecontainer swiper-wrapper">
+            <li class="swiper-slide">
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
+                  qui debitis dicta mollitia!
+                </p>
+              </blockquote>
+              <small>john doe</small>
+            </li>
+            <li class="swiper-slide">
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
+                  qui debitis dicta mollitia!
+                </p>
+              </blockquote>
+              <small>jane</small>
+            </li>
+            <li class="swiper-slide">
+              <blockquote>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum accusantium nulla
+                  qui debitis dicta mollitia!
+                </p>
+              </blockquote>
+              <small>tomas</small>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="button prev">
+          <span class="material-icons">chevron_left</span>
+        </button>
+        <button type="button" class="button next">
+          <span class="material-icons">chevron_right</span>
+        </button>
       </section>
       <section class="cta inner-pd d-flex flex-column align-items-center g-2">
         <div class="content d-flex flex-column g-1">
@@ -109,5 +115,22 @@
     </main>
     <footer></footer>
     <script type="module" src="js/main.js"></script>
+    <script>
+      const swiper = new Swiper(".testimonial .swiper", {
+        direction: "horizontal",
+        loop: true,
+      });
+
+      const slideWrapper = document.querySelector(".testimonial"),
+        prevBtn = slideWrapper.querySelector(".prev"),
+        nextBtn = slideWrapper.querySelector(".next");
+
+      nextBtn.addEventListener("click", () => {
+        swiper.slideNext();
+      });
+      prevBtn.addEventListener("click", () => {
+        swiper.slidePrev();
+      });
+    </script>
   </body>
 </html>
